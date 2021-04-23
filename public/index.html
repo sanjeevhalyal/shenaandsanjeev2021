@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sneha Weds Sanjeev</title>
+<link rel = "shortcut icon" href = "images/icon.png">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="yandex-verification" content="8e95eedc7a7e1d8c" />
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+
+<!-- styling main -->
+<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Papyrus' rel='stylesheet'>
+<style>
+
+#rgm {
+  padding-top: 40vh; font-family: 'Brush Script MT';font-size: 10vh; color: #1B3409; -webkit-text-stroke-width: 0px;
+}
+.invite {
+
+ font-family: 'Alegreya Sans SC';font-size: 8vh; color: white ; -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black; text-align:center;min-height:40vh;
+ background-image: url("images/invitebck3.png");
+
+  /* Set a specific height */
+  min-height: 80vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+            /* #1A611A */
+            text-align: center;
+
+}
+@media screen and (max-width: 1500px) {
+   .invite {
+      background-size: 40%;
+   }
+}
+
+@media screen and (max-width: 1350px) {
+   .invite {
+      background-size: 45%;
+   }
+}
+@media screen and (max-width: 1150px) {
+   .invite {
+      background-size: 50%;
+   }
+}
+@media screen and (max-width: 950px) {
+   .invite {
+      background-size: 55%;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   .invite {
+      background-size: 80%;
+   }
+   #rgm {
+     font-size: 8vh;
+   }
+}
+@media screen and (max-width: 600px) {
+   .invite {
+      background-size: 95%;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .invite {
+      background-size: 100%;
+   }
+}
+
+/* Style the header */
+.header {
+  font-family: 'Alegreya Sans SC';font-size: 8vh; color: #1A611A ; -webkit-text-stroke-width: 0px;
+             -webkit-text-stroke-color: black; text-align:center;
+
+
+  color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 0;
+  z-index: 10;
+  min-height:15vh
+}
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.hsticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f4fdb6
+}
+
+.bsticky {
+  position: fixed;
+  top: 15vh;
+  width: 100%;
+  z-index: 9;
+  background-color: #f4fdb6;
+
+}
+
+/*  count down */
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px;
+  background: #D6540F;
+  color: white
+}
+.numbers {
+  font-family: $big;
+  color: white;
+  font-size: 4em;
+}
+
+
+</style>
+<script>
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+if (isSafari){
+  console.log("Site doesnot work in safari sometimese");
+}
+
+
+
+window.onload = function () {
+    var header = document.getElementById("myHeader");
+    var border = document.getElementById("topborder");
+    var container = document.getElementById("maincontainer");
+    window.onscroll = function() {myFunction(header, border, container)};
+};
+// Get the header
+
+
+// When the user scrolls the page, execute myFunction
+
+
+// Get the offset position of the navbar
+// var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction(h, b, c) {
+  var h_sticky = h.offsetHeight * 2;
+  if (window.pageYOffset > h_sticky) {
+
+    h.classList.add("hsticky");
+  } else {
+    h.classList.remove("hsticky");
+  }
+
+  var b_sticky = b.offsetHeight * 4.3;
+  if (window.pageYOffset > b_sticky) {
+
+    b.classList.add("bsticky");
+    c.style.padding = "15vh 0";
+  } else {
+    b.classList.remove("bsticky");
+    c.style.padding = "0 0";
+  }
+}
+
+// countdown
+// Set the date we're counting down to
+var countDownDate = new Date("May 8, 2021 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").html("");
+  }
+  else {
+    // Output the result in an element with id="demo"
+    document.getElementById("timer").innerHTML =
+    "<div class=\"days\"> \
+  <div class=\"numbers\">" + days + "</div>days</div> \
+<div class=\"hours\"> \
+  <div class=\"numbers\">" + hours + "</div>hours</div> \
+<div class=\"minutes\"> \
+  <div class=\"numbers\">" + minutes + "</div>minutes</div> \
+<div class=\"seconds\"> \
+  <div class=\"numbers\">" + seconds + "</div>seconds</div> \
+</div>";
+  }
+
+}, 1000);
+
+</script>
+
+</head>
+<body style="background-color:#f4fdb6;height:100%;">
+  <div class="header" id="myHeader">
+    <style>
+    .firstname {
+       font-size: 6vw
+    }
+    .lastname {
+       font-size: 3vw
+    }
+
+    @media screen and (max-width: 650px) {
+      .firstname {
+         font-size: 8vw
+      }
+      .lastname {
+         font-size: 4vw
+      }
+    }
+    @media screen and (max-width: 450px) {
+      .firstname {
+         font-size: 10vw
+      }
+      .lastname {
+         font-size: 5vw
+      }
+    }
+    </style>
+  <div class="firstname" style="color: #1A611A ;position: relative; display:inline">
+    Sanjeev
+    <div  id ="last1" class="lastname" style="position: absolute;left:50%;bottom: -40%;
+    -webkit-text-stroke-color: #DAA520; -webkit-text-stroke-width: 0px;
+    color: rgb(226, 37, 73)">
+      Halyal
+    </div>
+  </div>
+  <a  class="firstname" style="color: #1A611A" >&</a>
+  <div class="firstname" style="color: #1A611A ;position: relative; display:inline">
+    Sneha
+    <div id ="last2" class="lastname" style="position: absolute;left:0%;bottom: -40%;
+    -webkit-text-stroke-color: #DAA520; -webkit-text-stroke-width:0px;
+    color: rgb(226, 37, 73)">
+      Patil
+    </div>
+  </div>
+</div>
+
+  <div class="invite">
+
+
+  <p id="rgm">
+  are getting married!
+  </p>
+  </div>
+  <div id="topborder" style="background-image: url('images/top-red.svg');
+  background-repeat: repeat-x;display:block;overflow:hidden;min-height:15vh">
+
+  </div>
+  <div id="maincontainer" class="container " style="display:block;overflow:hidden;min-height:70vh;width:100vw;padding-bottom:10vh">
+  <div class="row" style="min-height:40vh">
+      <!--  for our photo -->
+      <div class="six columns" style="text-align: center;"  >
+<style>
+
+.inside {
+
+  background: #1A611A;
+  -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
+}
+
+</style>
+
+
+<img src = "images/sanjeev7.png" alt="My Happy SVG"  class="inside" width="70%" height="70%"/>
+
+
+  </div>
+  <div class="six columns" style="text-align: center;">
+
+
+<img src = "images/sneha6.png" alt="My Happy SVG"  class="inside" width="70%" height="70%"/>
+  <!-- <img src = "images/circle.svg" alt="My Happy SVG" width="100%" height="100%"/> -->
+      </div>
+
+
+
+  </div>
+  <div class="row" style="text-align:center; font-family: 'Papyrus';font-size: 4vh; color: #1A611A ;">
+    <div class="twelve columns" >
+  Happy is the man who finds a true friend, and far happier is he who finds that true friend in his wife.
+
+-Franz Schubert
+</div>
+  </div>
+
+  <div class="row" style="min-height:30vh;text-align:center;margin-left:0px">
+<div class="twelve columns" >
+  <div width="100%" style="font-family: 'Gruppo';font-weight: bold;font-size: 5vh;text-align:center;">&#127882;It all begins in...</div>
+  <div id="countdown">
+    <div class="row">
+    <div id="timer"></div>
+  </div>
+  </div>
+</div>
+</div>
+  <div class="row" style="min-height:10vh">
+        <div class="twelve columns" style="position: relative;min-height:10vh; text-align:center;">
+          <div width="100%" style="font-family: 'Gruppo';font-weight: bold;font-size: 5vh;text-align:center;">When and Where</div>
+          <img src = "images/elephant3.png" alt="My Happy SVG" width="50%" height="50%"/>
+      </div>
+
+      </div>
+  <div class="row" style="min-height:100vh;padding-top:0vh;">
+      <!--  for our photo -->
+      <div class="six columns" style="position: relative; min-height:60vh; " >
+        <div width="100%" style="font-family: 'Gruppo';font-size: 5vh;text-align:left;">Wedding Ceremony</div>
+        <div width="100%" style="font-family: 'Gruppo';text-align:left;font-size: 3vh;">May 9th 2021</div>
+        <div width="100%" style="font-family: 'Gruppo';font-weight: bold;font-size: 2vh;text-align:left;">Dharmanatha Bhavana</div>
+        <div width="100%" style="font-family: 'Gruppo';font-weight: bold;font-size: 2vh;text-align:left;">Ram Nagar, <br>Belgaum, Karnataka 590016</div>
+        <div style="text-align:left;padding-top:2vh">
+          <a class="button" style="background-color: #B6FAFD;text-align:left;" href="wedding.ics">Add to calendar</a>
+        </div>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.7060888159123!2d74.52204500000002!3d15.875049999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8cc3d3870905c92b!2z4LKn4LKw4LON4LKu4LKo4LK-4LKlIOCyreCyteCyqA!5e0!3m2!1sen!2sus!4v1617647983549!5m2!1sen!2sus"
+        width="100%" height="60%" style="-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;border:0;min-height:40vh;padding-top:5vh" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- <div class="four columns" style=" position: relative; min-height:50vh;margin-top:15vh" >
+        <img src = "images/elephant2.png" alt="My Happy SVG" width="150%" height="150%"
+        style="border:0;position: absolute; top: -40%; left: -25%"/>
+        </div> -->
+      <div class="six columns" style="position: relative; min-height:60vh;">
+        <div width="100%" style="font-family: 'Gruppo';font-size: 5vh;text-align:right;">Reception Party </div>
+        <div width="100%" style="font-family: 'Gruppo';text-align:right;font-size: 3vh;">May 14th 2021 (needs update)</div>
+        <div width="100%" style="font-family: 'Gruppo';font-weight: bold;font-size: 2vh;text-align:right;"> Fairfield by Marriott Bengaluru Rajajinagar </div>
+        <div width="100%" style="font-family: 'Gruppo';font-weight: bold;font-size: 2vh;text-align:right;"> 59th C Cross Rd, 4th M Block, Manjunath Nagar, <br>Rajajinagar, Bengaluru, Karnataka 560010 </div>
+        <div style="text-align:right;padding-top:2vh">
+          <a class="button" style="background-color: #B6FAFD;text-align:right;" href="reception.ics">Add to calendar</a>
+         </div>
+        <br>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62212.06725392208!2d77.59911469697568!3d12.955578961723115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9da8f881a0c91f87!2sFairfield%20by%20Marriott%20Bengaluru%20Rajajinagar!5e0!3m2!1sen!2sin!4v1617648108046!5m2!1sen!2sin"
+        width="100%" height="60%" style="-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;border:0;min-height:40vh;padding-top:5vh" allowfullscreen="" loading="lazy">
+      </iframe>
+  </div>
+
+  </div>
+  <div class="row" >
+    <div class="six columns" style="font-family: 'Copperplate';font-weight: bold;color:red;text-decoration: underline;">
+
+  <div>
+    During these times of uncertainty, we want to prioritize the health of loved ones above all else, and understand any and all inabilities to attend. Your safety, peace of mind, and well being are most important. Please keep an eye on our website as the date gets closer, in the case that postponing becomes necessary.
+  </div>
+  </div>
+  <div class="six columns">
+  <img src = "images/covidtip.svg" alt="My Happy SVG" width="100%" height="100%"/>
+</div>
+</div>
+</div>
+
+
+
+  <div style="background-image: url('images/bottom-red.svg');
+  background-repeat: repeat-x;display:block;overflow:hidden;min-height:15vh">
+
+  </div>
+</body>
+</html>

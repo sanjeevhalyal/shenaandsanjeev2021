@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:20210514T133000Z
+DTEND:20210514T173000Z
+SUMMARY:SnehaAndSanjeevReception
+DESCRIPTION:Reception at Halyal's\nFairfield by Marriott Bengaluru Rajajinagar\nhttps://g.page/FairfieldRajajinagar?share
+LOCATION:https://g.page/FairfieldRajajinagar?share
+END:VEVENT
+END:VCALENDAR
